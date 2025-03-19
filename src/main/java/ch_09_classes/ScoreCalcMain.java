@@ -16,7 +16,8 @@ public class ScoreCalcMain {
         Scanner scanner = new Scanner(System.in);
         ScoreCalc scoreCalc = new ScoreCalc();
     }
-}boolean endOfCalc = false;
+}
+boolean endOfCalc = false;
 double score1 = 0;
 double totalScore = 0;
 int totalSubjects = 1;
