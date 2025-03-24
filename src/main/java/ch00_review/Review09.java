@@ -19,17 +19,17 @@ package ch00_review;
         a. call2() 유형입니다.
         b. 내부에 로직을 작성하여 필드의 논리적인 개념에 맞지 않는
             데이터를 걸러낼 수 있습니다.(배터리타임이 음수면 아예 메서드를 정지시킬 수 있음)
-         생성자 때와 마찬가지로 alt +ins -> Setter 선택으로 자동 생성 가능
-         -> 매개변수와 argument는 서로 다른 개념이다.
+        생성자 때와 마찬가지로 alt + ins -> Setter 선택으로 자동 생성 가능
+        -> 매개변수와 argument는 서로 다른 개념이다.
 
-      2. Getter : 속성값을 조회하기 위한 method를 통칭
-       get+속성명으로 이루어져있습니다.
-       ex) getBatteryTime()
-      a. call3() 유형입니다.
-      b. main단계에서 데이터 조회시의 조작이 가능합니다.
+    2. Getter : 속성값을 조회하기 위한 method를 통칭
+        get+속성명으로 이루어져있습니다.
+        ex) getBatteryTime()
+        a. call3() 유형입니다.
+        b. main단계에서 데이터 조회시의 조작이 가능합니다.
 
-      ex) Syestem.out.println (watch1.getButton() + "1"); // true!
-      se
+        ex) System.out.println(watch1.getButton() + "!"); // true!
+        setter와 마찬가지로 alt + ins를 통해서 작성이 가능합니다.
 
     지시 사항
         1. 기본생성자 / 이름을 필수로 갖는 매개변수 생성자를 정의할 것
@@ -52,14 +52,56 @@ class SmartWatch {
     private boolean celular;
     private int batteryTime;
     private String title;
+
+    public SmartWatch() {}
+
+    public SmartWatch(String title) {
+        this.title = title;
+    }
+
+    void showInfo() {
+        System.out.println("이 시계는 " + title + "입니다. 배터리 타임이 " + batteryTime + "이지요.");
+        System.out.println("감사합니다.");
+    }
+
+    public void setButton(boolean button) {
+        this.button = button;
+    }
+
+    public void setCelular(boolean celular) {
+        this.celular = celular;
+    }
+
+    public void setBatteryTime(int batteryTime) {
+        // 10 미만은 대입될 수 없도록 조건문 작성
+        if (batteryTime < 10) {
+            System.out.println("불가능한 배터리타임 입력입니다.");
+            return;
+        }
+        this.batteryTime = batteryTime;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }
 
 public class Review09 {
     public static void main(String[] args) {
         SmartWatch watch1 = new SmartWatch();
 
-        watch1
+        watch1.setButton(true);
+        watch1.setCelular(true);
+        watch1.setBatteryTime(-10); // 대입되지 않고 실패되도록 작성해야합니다.
+        watch1.showInfo();  // 배터리 타임이 대입되지 않음을 확인하기 위해 showInfo()호출
+        watch1.setBatteryTime(18);
+        watch1.setTitle("애플워치");
+        watch1.showInfo();
 
+
+
+    }
+}
 
 
     }

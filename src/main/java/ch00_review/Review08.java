@@ -30,14 +30,36 @@ class Building {
     int wall;
     int door;
     int window;
-    int floor;
     String title;
 
     // 기본 생성자 정의
+    public Building() {}
 
     // 이름만 있는 매개변수 생성자 정의
+    public Building(String title) {
+        this.title = title;
+    }
 
     // 전부 다 있는 매개변수 생성자 정의
+    public Building(boolean elevator, boolean stair,
+                    int wall, int door,
+                    int window, String title) {
+        this.elevator = elevator;
+        this.stair = stair;
+        this.wall = wall;
+        this.door = door;
+        this.window = window;
+        this.title = title;
+    }
+
+    void showInfo() {
+        System.out.println("이 건물은 " + title + "이고, 벽이 "
+                + wall + "개, 문이 " + door + "개, 창문이 " + window
+                + "개 있습니다.");
+        System.out.println("엘리베이터 유무 : " + elevator);
+        System.out.println("계단 유무 : " + stair + "\n");
+    }
+
     /*
         Review08 클래스에서 Building 클래스의 객체를 생성
         1. building1 -> 기본생성자로 정의
@@ -70,22 +92,37 @@ class Building {
         이 건물은 컴퓨터타운이고, 벽이 3개, 문이 1개, 창문이 0개 있습니다.
         엘리베이터 유무 : false
         계단 유무 : true
-
-
      */
+
 }
 
 public class Review08 {
     public static void main(String[] args) {
-  Building building1 = new Building();
-  Building building2 = new Building(title : "코리아아이티타운");
-  Building building3 = new Building(elevator: fales, stair:fales,
-        wall:3, door:1,
-        window:0 title:"컴퓨터 타운");
+        // 기본 생성자를 통한 객체 생성
+        Building building1 = new Building();
+        Building building2 = new Building("코리아아이티타운");
+        Building building3 = new Building(false, false,
+                3, 1,
+                0, "컴퓨터타운");
 
-  void showInfo(){
+        // 비어있는 속성에 속성값 집어넣습니다.
+        // 1. building1
+        building1.elevator = false;
+        building1.stair = false;
+        building1.wall = 5;
+        building1.door = 2;
+        building1.window = 6;
+        building1.title = "재팬아이티타운";
 
-        }
+        // 2. building2
+        building2.elevator = true;
+        building2.stair = true;
+        building2.wall = 8;
+        building2.door = 4;
+        building2.window = 230;
 
+        building1.showInfo();
+        building2.showInfo();
+        building3.showInfo();
     }
 }
