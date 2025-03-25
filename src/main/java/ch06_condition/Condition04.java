@@ -42,5 +42,4 @@ public class Condition04 {
 
         System.out.println("당신의 등급 : " + rating);
     }
-}{
 }

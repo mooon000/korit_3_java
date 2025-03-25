@@ -71,7 +71,17 @@ public class Array01 {
             System.out.print(strArr1[i] + "/");
         }
 
-
+/*
+1.배열의 필요성
+2. 각 element 출력 방법
+3. 2에 더해서 향상된 for문 구조
+4. 배열을 응용한 methods
+5. 4에 더해서 접근 지정자 개념 도입 ->method 내에서 medthod를 호출
+6. 배열 전체의 출력
+7. 오름 차순 정렬
+8. 내림 차순 정렬
+9. 7, 8의 경우와 각 element 별 추출 방식의 차이
+ */
 
     }
 }

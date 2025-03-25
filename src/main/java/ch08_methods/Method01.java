@@ -74,7 +74,7 @@ public class Method01 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner =  new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String myName = "";
         int myAge = 0;
 
@@ -86,6 +86,8 @@ public class Method01 {
         // myName, myAge 변수에 저장한 부분입니다.
 
         System.out.println(introduce(myName, myAge));
+    }
+}
         // 그리고 이상의 코드는 81 - 86번 라인까지의 결과값들을 새로운 메서드인 introduce()의 name, age
         // 매개변수에 각각 myName 및 myAge를 argument로 집어넣어서
         // introduce() 메서드 내에서 데이터를 재가공하는 결과를 거치게됩니다.
@@ -110,6 +112,4 @@ public class Method01 {
 
 //        int nextAge2 = writeMyage2(38) + 1;
 //        System.out.println(nextAge2);
-    }
-}{
-}
+

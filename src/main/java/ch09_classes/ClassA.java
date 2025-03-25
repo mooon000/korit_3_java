@@ -41,5 +41,5 @@ public class ClassA {
     void callName() {       // public static void가 아니라 그냥 void네요.
         System.out.println(name + "을 부릅니다.");
     }
-}{
+
 }
