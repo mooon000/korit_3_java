@@ -78,15 +78,15 @@ public class Array11 {
 
         // 내림 차순 배열
         Arrays.sort(numbers, Comparator.reverseOrder());
-     // 오름차순 시에 사용했던 sort()와 마찬가지로 배열 자체를 다 바꿉니다.
+        // 오름차순 시에 사용했던 sort()와 마찬가지로 배열 자체를 다 바꿉니다.
         // .sort() 내부의 argument가 두 개 라는 점에서 여러분들은
-        // overloading이 이루어졌다는 점을
-     // Comparator. reverseOrder() 메서드를 사용하기 위해서
-     // int []
+        // overloading이 이루어졌다는 점을 추측할 수 있으면 현재는 만족스럽습니다.
+        // Comparator.reverseOrder() 메서드를 사용하기 위해서
+        // int[] -> Integer[]로 바꿨는데, 기본 자료형 int를 String처럼
+        // 클래스로 바꿨다고만 일단 생각해주시면 됩니다.
+        // 추후 수업 예정
+
+        double a = 1.2;
+        Double b = 1.2;
     }
 }
-
-
-
- double a = 1.2;
- Double b = 1.2;
