@@ -34,5 +34,29 @@ public class Main {
         // 서로 다른 방식으로 굴러갈 경우에만 이루어지면 되고,
         // 부모 클래스의 메서드를 완전히 동일하게 자식 클래스에서 사용할 경우에는
         // 굳이 alt + ins를 통해서 override methods를 할 필요가 없습니다.
+
+
+        /*
+         4. Main.java로 이동해서
+        tabletFactory1 객체를 생성하고, 애플 태블릿 공장 이라고 이름 붙일 것.
+    5. 이름을 구글 태블릿 공장이라고 수정할 것 -> 그리고 getter를 활용
+        현재 공장은 구글 태블릿 공장으로 변경되었습니다. 라고 콘솔에 출력될 수 있도록 작성하시오.
+
+    6. 객체명.produce("구글 태블릿")을 호출하시오.
+    7. 객체명.manage()를 호출하시오.
+    8. 객체명.upgrade("구글 태블릿 10인치 2세대")를 호출하시오.
+         */
+
+        // 4.
+        TabletFactory tabletFactory1 = new TabletFactory("애플 태블릿 공장");
+        // 5.
+        tabletFactory1.setName("구글 태블릿 공장");
+        System.out.println("현재 공장은 " + tabletFactory1.getName() + "으로 변경되었습니다.");
+        // 6.
+        tabletFactory1.produce("구글 태블릿");
+        // 7.
+        tabletFactory1.manage();
+        // 8.
+        tabletFactory1.upgrade("구글 태블릿 10인치 2세대");
     }
 }
