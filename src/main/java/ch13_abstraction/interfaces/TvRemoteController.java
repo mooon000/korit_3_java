@@ -44,6 +44,10 @@ public class TvRemoteController {
 
     public void onDownVolumeDownButton() {
         volumeDownButton.onDown();
+  public void on
+
+
+
     }
 
 }
